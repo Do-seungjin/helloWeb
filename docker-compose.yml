@@ -2,7 +2,7 @@
 # 사설망 network 생성 
 networks:
   kosa_network:
-    driver: bridge		
+    driver: bridge
 # 서비스 선언 
 services:
 # was1 생성
