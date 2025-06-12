@@ -17,9 +17,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       
+      - name: JUnit test
+        run: ./gradlew --info test
+      
       - name: build
         run: ./gradlew bootJar
-      
+        
       - name: docker image build
         run: docker build -t ${{ secrets.USERNAME }}/${{ env.REPOSITORY_NAME }} .
       
